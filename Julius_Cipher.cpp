@@ -38,7 +38,7 @@ int main()
         julius['z'] = 26;
         int length = julius_cipher.length();
         bool flag = true;
-        for (int j = 0; j < length/2; j++)
+        for (int j = 0; j < length; j++)
         {
             if(julius_cipher[j] != julius_cipher[length - j - 1])
             {
@@ -49,7 +49,6 @@ int main()
         if (flag)
         {
             cout << "Palindrome" << endl;
-            break;
         }
         else
         {

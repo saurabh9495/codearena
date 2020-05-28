@@ -35,12 +35,12 @@ int main()
         julius['w'] = 23;
         julius['x'] = 24;
         julius['y'] = 25;
-        julius['a'] = 26;
+        julius['z'] = 26;
         int length = julius_cipher.length();
         bool flag = true;
-        for (int j = 0; i < length; i++)
+        for (int j = 0; j < length/2; j++)
         {
-            julius_cipher[j] != julius_cipher[length - j - 1];
+            if(julius_cipher[j] != julius_cipher[length - j - 1])
             {
                 flag = false;
                 break;
@@ -54,12 +54,12 @@ int main()
         else
         {
             int prod = 1;
-            for (int j = 0; i < length; i++)
+            for (int k = 0; k < length; k++)
             {
-                auto itr = julius.find(julius_cipher[j]);
+                auto itr = julius.find(julius_cipher[k]);
                 prod = itr->second * prod;
             }
-            cout << prod << "endl";
+            cout << prod << endl;
         }
     }
     return 0;
